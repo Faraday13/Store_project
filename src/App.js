@@ -1,10 +1,11 @@
-
+import React from "react";
+import TittlePage from "./components/TittlePage";
 
 function App() {
   return (
-    <div className="App">
-      <h1>App</h1>
-    </div>
+    <>
+      <TittlePage/>
+    </>
   );
 }
 
