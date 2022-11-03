@@ -1,0 +1,4 @@
+env
+postgres_install_guide.txt
+.pg_service.conf
+.pgpass
