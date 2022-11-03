@@ -2,7 +2,9 @@ import React from 'react'
 
 const TittlePage = () => {
   return (
-    <div>TittlePage</div>
+    <div className='container'>
+      <div className='title'>TittlePage</div>
+    </div>
   )
 }
 
