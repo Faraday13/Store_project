@@ -1,3 +1,4 @@
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css");
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -48,10 +49,51 @@ table {
   border-spacing: 0;
 }
 
+h1, h2, h3, h4, h5, h6, p {
+  display: inline-block;
+}
+
+a:-webkit-any-link {
+  color: white;
+  text-decoration: none;
+}
+
 .container {
   max-width: 1200px;
-  margin-left: auto;
-  margin-right: auto;
+  min-height: 200px;
+  margin: 40px auto 40px auto;
+}
+
+.fz-10px {
+  font-size: 10px;
+}
+
+.fz-12px {
+  font-size: 12px;
+}
+
+.fz-14px {
+  font-size: 14px;
+}
+
+.fz-16px {
+  font-size: 16px;
+}
+
+.fz-18px {
+  font-size: 18px;
+}
+
+.fz-20px {
+  font-size: 20px;
+}
+
+.fz-22px {
+  font-size: 22px;
+}
+
+.fz-60px {
+  font-size: 60px;
 }
 
 .header_container {
@@ -59,19 +101,56 @@ table {
   height: 140px;
   background: black;
   color: white;
+  display: flex;
+  justify-content: center;
 }
-.header_container .header_wrapper {
+.header_container .header_left_wrapper {
+  width: 15%;
+}
+.header_container .header_left_wrapper .logo_wrapper {
   height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-.header_container .header_wrapper .header_items {
+.header_container .header_right_wrapper {
+  width: 15%;
+}
+.header_container .header_right_wrapper .nav_wrapper {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.header_container .header_center_wrapper {
+  height: 100%;
+  width: 70%;
+}
+.header_container .header_center_wrapper .header_items {
   height: 100%;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
 }
 
-.title {
-  height: 700px;
+.title_container {
+  height: 200px;
+}
+.title_container .title_text_container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+.title_container .title_text_container h1 {
+  font-size: 50px;
+}
+
+.main_products_container {
+  height: 500px;
 }
 
 .footer_container {
