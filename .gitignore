@@ -2,7 +2,10 @@ env
 .pgpass
 postgres_install_guide.txt
 .pg_service.conf
+node_modules
 .gitignore
+**/__pycache__
+*.pyc
 
 # See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
 
