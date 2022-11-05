@@ -149,8 +149,27 @@ a:-webkit-any-link {
   font-size: 50px;
 }
 
+.item_container {
+  width: 200px;
+  height: 350px;
+  border: solid 3px black;
+}
+
 .main_products_container {
   height: 500px;
+}
+.main_products_container .main_disc_container {
+  margin-bottom: 30px;
+}
+.main_products_container .product_wrapper {
+  display: flex;
+}
+.main_products_container .product_wrapper .item_wrapper .img_container {
+  width: 100%;
+  margin-bottom: 5px;
+}
+.main_products_container .product_wrapper .item_wrapper .img_container .img_product {
+  width: 100%;
 }
 
 .footer_container {
