@@ -1,14 +1,66 @@
 @import "reset";
 @import "default";
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css");
+
+$fontSizes: (
+    '10px': 10px,
+    '12px': 12px,
+    '14px': 14px,
+    '16px': 16px,
+    '18px': 18px,
+    '20px': 20px,
+    '22px': 22px,
+    '60px' : 60px
+);
+
+@mixin font-sizes-class-generator($sizes: $fonstSizes) {
+
+    @each $key,
+    $value in $sizes {
+        .fz-#{$key} {
+            font-size: $value;
+        }
+    }
+}
+
+@include font-sizes-class-generator($fontSizes);
 
 .header_container {
     width: 100%;
     height: 140px;
     background: black;
     color: white;
+    display: flex;
+    justify-content: center;
 
-    .header_wrapper {
+    .header_left_wrapper {
+        width: 15%;
+
+        .logo_wrapper {
+            height: 100%;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+
+    .header_right_wrapper {
+        width: 15%;
+
+        .nav_wrapper {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+
+    .header_center_wrapper {
         height: 100%;
+        width: 70%;
+
         .header_items {
             height: 100%;
             display: flex;
@@ -18,10 +70,49 @@
     }
 }
 
-.title {
-    height: 700px;
+.title_container {
+    height: 200px;
+
+    .title_text_container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+
+        h1 {
+            font-size: 50px;
+        }
+    }
 }
 
+.item_container {
+    width: 200px;
+    height: 350px;
+    border: solid 3px black;
+}
+
+.main_products_container {
+    height: 500px;
+
+    .main_disc_container {
+        margin-bottom: 30px;
+    }
+
+    .product_wrapper {
+        display: flex;
+    .item_wrapper {
+
+        .img_container {
+            width: 100%;
+            margin-bottom: 5px;
+            .img_product {
+                width: 100%;
+            }
+        }
+    }
+}
+}
 .footer_container {
     width: 100%;
     height: 300px;
