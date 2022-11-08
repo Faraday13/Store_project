@@ -1,5 +1,6 @@
 import React from 'react'
 import { useState } from 'react'
+import PostService from '../components/API/PostService'
 import ItemCard from '../components/ItemCard'
 
 const TittlePage = () => {
@@ -10,12 +11,18 @@ const TittlePage = () => {
     {id:3, title: 'item 3', price: '324$', disc: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Perferendis ratione aperiam quisquam corporis'},
     {id:4, title: 'item 4', price: '324$', disc: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Perferendis ratione aperiam quisquam corporis'},
     {id:5, title: 'item 5', price: '324$', disc: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Perferendis ratione aperiam quisquam corporis'},
-    {id:6, title: 'item 6', price: '324$', disc: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Perferendis ratione aperiam quisquam corporis'},
-    {id:7, title: 'item 7', price: '324$', disc: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Perferendis ratione aperiam quisquam corporis'},
-    {id:8, title: 'item 8', price: '324$', disc: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Perferendis ratione aperiam quisquam corporis'},
-    {id:9, title: 'item 9', price: '324$', disc: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Perferendis ratione aperiam quisquam corporis'},
-    {id:10, title: 'item 10', price: '324$', disc: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Perferendis ratione aperiam quisquam corporis'},
+    {id:6, title: 'item 6', price: '324$', disc: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Perferendis ratione aperiam quisquam corporis'}
   ])
+  const [newProd, setProd] = useState()
+
+  async function getProd () {
+    const responce = await PostService.getAll()
+    setProd(responce)
+  }
+  useEffect(() => {
+  getProd()
+  }, [])
+  console.log(newProd)
   return (
     <>
       <div className='container'>
