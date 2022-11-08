@@ -1,8 +1,7 @@
 import React from 'react'
 
 const ItemCard = ({ item }) => {
-    const a = item
-    console.log(a)
+
     return (
         <div className='item_container'>
             <div className='item_wrapper'>
